@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p{ margin: 0; padding: 0; }
+img{ border:0px; vertical-align:middle;}
+ul,li{list-style:none;}
+button,input{outline:none;border: none;font-family:"Microsoft YaHei";}
+textarea{resize: none;outline:none;}
+
+body{font-family:"Microsoft YaHei";font-size:12px;}
+
+a{text-decoration:none;}
+a:hover{color: #333;}
+ul li a{color: #333;font-size: 13px;}
+
+.clearfix{*zoom:1;}
+.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
+.clearfix:after{clear:both;}
+
+.lf{float: left;}
+.rt{float: right;}

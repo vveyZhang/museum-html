@@ -36,8 +36,11 @@
 }
 .home-introduce-text{
     overflow: hidden;
-    width: 230px;
+    width: 0px;
     margin: 15px auto 0px auto;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    height: 399px;
 }
 
 .home-page1-tips{
@@ -49,12 +52,12 @@
     top: 50%;
     margin-top: -78px;
     right: 80px;
-    background: url("../images/home-page1-scroll-icon.png") no-repeat center 0px;
+    background: url("../images/home-page1-scroll-icon.png") no-repeat 8px 0px;
 }
 .home-logo{
     display: block;
     position: absolute;
-    left: 70px;
+    left: 50px;
     top: 20px;
     z-index: 5;
 }
@@ -64,15 +67,16 @@
     height: 69px;
     position: absolute;
     top: 120px;
-    left: 75px;
+    left: 55px;
     cursor: pointer;
+    z-index: 5;
 }
 .home-page-inner{
     position: absolute;
     top: 55%;
     z-index: 5;
     margin-top: -114px;
-    left: 75px;
+    left: 55px;
 }
 .home-page-inner li{
     height: 28px;
@@ -111,7 +115,7 @@
 }
 .home-search{
     position: absolute;
-    right: 70px;
+    right: 50px;
     height: 40px;
     line-height: 40px;
     width: 210px;
@@ -142,7 +146,7 @@
 .home-about{
     width: 74px;
     position: absolute;
-    right: 70px;
+    right: 50px;
     z-index: 5;
     top: 55%;
     margin-top: -110px;
@@ -264,6 +268,8 @@
     background: #ffffff;
     position: absolute;
     top: 0px;
+    opacity: 0;
+    filter:alpha(opacity=50);
 }
 .pagesTwo-enter-title{
     padding: 0px 18px;
@@ -328,13 +334,13 @@
 }
 .pagesThree-content{
     width: 920px;
-    height: 450px;
+    height: 510px;
     overflow: hidden;
     position: absolute;
     z-index: 6;
     left: 50%;
     margin-left: -460px;
-    top: 15%;
+    top: 16%;
 }
 .pagesThree-nav-line{
     height: 1px;
@@ -345,8 +351,9 @@
     margin-top: 21px;
 }
 .pagesThree-content-nav{
-    margin-top: 29px;
     height: 42px;
+    margin-top: 8px;
+    margin-bottom: 30px;
 }
 .pagesThree-nav-label{
     width: 175px;
@@ -382,4 +389,412 @@
 }
 .pagesThree-nav-label.cur .pagesThree-nav-bg{
     display: block;
+}
+.pagesThree-banner-container{
+    height: 424px;
+    overflow: hidden;
+    border: 3px solid #f2d192 ;
+    background:rgba(255,255,255,0.4) ;
+}
+.pagesThree-banner{
+    height: 424px;
+}
+.pagesThree-inner-banner-warp{
+    height: 350px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.pagesThree-banner-infor{
+    margin-left: 20px;
+    width: 354px;
+}
+.pagesThree-banner-title{
+    font-size: 26px;
+    color: #a76d00;
+    height: 72px;
+    line-height: 36px;
+    overflow: hidden;
+}
+.pagesThree-banner-span{
+    width: 40px;
+    height: 3px;
+    background: #e3a93c;
+    display: block;
+    margin-top: 5px;
+    margin-left: 4px;
+}
+.pagesThree-banner-details{
+    font-size: 18px;
+    line-height: 36px;
+    color: #000000;
+    margin-top: 24px;
+    margin-left: 4px;
+    height: 216px;
+    overflow: hidden;
+}
+.pagesThree-banner-more{
+    display: block;
+    color: #e3a93c;
+    border: 1px solid #e3a93c;
+    height: 28px;
+    width: 88px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 14px;
+    margin-left: 4px;
+}
+.pagesThree-banner-pic{
+    overflow: hidden;
+    width: 520px;
+    height: 350px;
+}
+.pagesThree-banner-pic img{
+    display: block;
+    margin-left: 20px;
+    float: left;
+    -webkit-transition: transform 0.6s;
+    -moz-transition: transform 0.6s;
+    -ms-transition: transform 0.6s;
+    -o-transition: transform 0.6s;
+    transition: transform 0.6s;
+}
+.pagesThree-banner-pic img:hover{
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+}
+.pagesThree-banner-btn{
+    text-align: center;
+    height: 7px;
+    padding-top: 28px;
+}
+.pagesThree-inner-banner{
+    overflow: hidden;
+    height: 350px;
+}
+.pagesThree-banner-btn span{
+    display: inline-block;
+    height: 5px;
+    width: 48px;
+    border: 1px solid #e3a93c;
+    margin: 0px 12px;
+    vertical-align: top;
+    cursor: pointer;
+}
+.pagesThree-banner-btn span.cur{
+    border: 1px solid #a76d00;
+    background: #a76d00;
+}
+.pagesFour-banner-pic{
+    display: block;
+    width: 224px;
+    height: 424px;
+    position: absolute;
+    top: 0px;
+    padding: 5px;
+    background: #ffffff;
+    border: 3px solid #e4aa40;
+    overflow: hidden;
+}
+.pagesFour-banner-pic img{
+    -webkit-transition: transform 0.6s;
+    -moz-transition: transform 0.6s;
+    -ms-transition: transform 0.6s;
+    -o-transition: transform 0.6s;
+    transition: transform 0.6s;
+}
+.pagesFour-banner-pic:hover img{
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+}
+.pagesFour-main{
+    width: 1005px;
+    position: absolute;
+    height: 0px;
+    top: 52%;
+    margin-top: -240px;
+    left: 50%;
+    margin-left: -502px;
+    overflow: hidden;
+    z-index: 6;
+}
+.pagesFour-banner-container{
+    position: relative;
+    height: 440px;
+    overflow: hidden;
+}
+.pagesFour-banner{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    top: 0px;
+    height: 440px;
+}
+.pagesFour-banner-pic p{
+    height: 30px;
+    position: absolute;
+    top: 28px;
+    left: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+
+}
+.pagesFour-banner-btn span{
+    display: inline-block;
+    height: 5px;
+    width: 48px;
+    border: 1px solid #e3a93c;
+    margin: 0px 12px;
+    vertical-align: top;
+    cursor: pointer;
+}
+.pagesFour-banner-btn span.cur{
+    border: 1px solid #a76d00;
+    background: #a76d00;
+}
+.pagesFour-banner-btn{
+    height: 7px;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 33px;
+}
+.pagesFive-main{
+    width: 998px;
+    height: 538px;
+    position: absolute;
+    top: 52%;
+    margin-top: -269px ;
+    margin-left: -499px;
+    left: 50%;
+    z-index: 6;
+}
+.pagesFive-main-logo{
+    line-height: 538px;
+    height: 538px;
+    text-align: right;
+    width: 409px;
+    position: relative;
+}
+.pagesFive-news-icon{
+    background: url("../images/pages5-news-icon.png") no-repeat center center;
+    width: 366px;
+    height: 538px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.pagesFive-main-content{
+    width: 510px;
+}
+.pagesFive-news-nav li{
+    height: 59px;
+    width: 190px;
+    margin-right: 25px;
+    float: left;
+}
+.pagesFive-news-nav li a{
+    display: block;
+    height: 37px;
+    width: 168px;
+    text-align: center;
+    line-height: 37px;
+    margin: 8px auto;
+    border: 3px solid #e59500;
+    color: #a76d00;
+    font-size: 18px;
+}
+.pagesFive-news-nav li.cur{
+    width: 184px;
+    border: 3px solid #e59500;
+    height: 53px;
+}
+.pagesFive-news-nav li.cur a{
+    background: #e59500;
+    color: #ffffff;
+    border: 3px solid #e59500;
+    margin: 5px auto;
+}
+.pagesFive-news-nav{
+    height: 59px;
+    overflow: hidden;
+}
+.pagesFive-news{
+    height: 76px;
+    overflow: hidden;
+    margin-bottom: 21px;
+}
+.pagesFive-news-time{
+    height: 70px;
+    border: 3px solid #e59500;
+    width: 89px;
+    text-align: center;
+}
+.pagesFive-news-time h1{
+    font-size: 30px;
+    line-height: 30px;
+    height: 30px;
+    color: #e3a93c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.pagesFive-news-time p{
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    overflow: hidden;
+    color: #e3a93c;
+}
+.pagesFive-news-detail{
+    width: 395px;
+    padding-top: 12px;
+}
+.pagesFive-news-detail h1{
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pagesFive-news-detail h1 a{
+    color: #a76d00;
+}
+.pagesFive-news-detail span{
+    display: block;
+    width: 17px;
+    background: #d1921b;
+    height: 1px;
+    margin: 9px 0px;
+}
+.pagesFive-news-detail p{
+    font-size: 14px;
+    color: #000000;
+    line-height: 14px;
+    height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pagesFive-news:hover .pagesFive-news-time{
+    background: #e59500;
+}
+.pagesFive-news:hover .pagesFive-news-time h1,.pagesFive-news:hover .pagesFive-news-time p{
+    color: #ffffff;
+}
+.pagesFive-news-container{
+    padding-top: 46px;
+    height: 433px;
+    overflow: hidden;
+}
+.pagesFive-news-list{
+    height: 388px;
+    overflow: hidden;
+}
+.pagesFive-news-content .pagesTwo-enter-more{
+    margin-top: 15px;
+    margin-left: 0px;
+}
+.home-menu{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 20;
+    background: url("../images/home-menu-bg.jpg") repeat center center;
+}
+.home-menu li{
+    position: absolute;
+    width: 25%;
+    height: 50%;
+    overflow: hidden;
+    background:rgba(255,255,255,.2) ;
+}
+.home-menu li.nth-child{
+    background:none ;
+}
+.home-menu-label{
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    overflow: hidden;
+}
+.home-menu-label-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+.home-menu-label-bg span{
+    background: #d1921b;
+    position: absolute;
+    display: block;
+    /*z-index: 30;*/
+}
+.home-menu-label-bg span.top{
+    height:3px;
+    width: 100%;
+    left: 100%;
+    top: 0px;
+}
+.home-menu-label-bg span.right{
+    width:3px;
+    height: 100%;
+    top: 100%;
+    right: 0px;
+}
+.home-menu-label-bg span.bottom{
+    height: 3px;
+    width: 100%;
+    bottom: 0px;
+    left: -100%;
+}
+.home-menu-label-bg span.left{
+    width: 3px;
+    height: 100%;
+    left: 0px;
+    top: 100%;
+}
+.home-menu-icon{
+    display: block;
+    margin:15% auto 0;
+}
+.home-menu-line{
+    background: url("../images/home-menu-line.png") no-repeat center 0px;
+    height: 3px;
+    width: 80%;
+    margin: 11% auto 9% auto;
+    display: block;
+}
+.home-menu-Ename{
+    height: 30px;
+    line-height: 30px;
+    color: #d1921b;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.home-menu-name{
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    color: #d1921b;
+    text-align: center;
+    margin: 1px;
+}
+.home-menu-name span{
+    padding-bottom: 15px;
+    border-bottom: 3px solid #e3a93c;
 }

@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="css/public.css" type="text/css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/common.js"></script>
 </head>
-<body>
+<body style="overflow: hidden;">
 <!--通用导航-->
-<div class="home-common">
+<div class="home-common" style="display: none;">
     <div class="home-header"></div>
     <img src="images/home-logo.png" width="335" height="63" alt="" class="home-logo"/>
     <div class="home-nav-enter"></div>
@@ -48,7 +49,7 @@
     </div>
 </div>
 <!--page1-->
-<div class="pages pagesOne" style="display: none;">
+<div class="pages pagesOne active_page" style="top: 0px">
     <img src="images/home-page1-bg.jpg" alt="" class="pages-bg"/>
     <div class="home-introduce-main">
         <img src="images/home-page1-logo.png" width="521" height="171" alt="" class="home-page1-logo"/>
@@ -64,10 +65,10 @@
 </div>
 <!--page1 end-->
 <!--page 2-->
-<div class="pages pagesTwo" style="display: none">
+<div class="pages pagesTwo" style="top: 100%">
     <img src="images/home-pages2-bg.jpg" alt="" class="pages-bg"/>
     <div class="pagesTwo-container">
-        <div class="pagesTwo-enter" style="left: 0px;">
+        <div class="pagesTwo-enter pagesTwo-sides-enter" style="left: 0px;top: 100px">
             <div class="pagesTwo-enter-title">
                 <h1>馆长致辞</h1>
                 <p>Curator Speech</p>
@@ -76,7 +77,7 @@
             <p class="pagesTwo-enter-content">博物馆事业是一个国家、地区社会文明程度的重要体现。近年来，遵义着力打造博物馆之城，先后建成了纺织博物馆、给水技术博物馆、蓝印花布博物馆、珠算博物馆、城市博物馆、风筝博物馆等……</p>
             <a href="" class="pagesTwo-enter-more">查看详情 <span></span></a>
         </div>
-        <div class="pagesTwo-enter" style="left: 320px">
+        <div class="pagesTwo-enter pagesTwo-center-enter" style="left: 320px;top: 200px">
             <div class="pagesTwo-enter-title">
                 <h1>博物馆简介</h1>
                 <p>Museum Introduction</p>
@@ -85,7 +86,7 @@
             <p class="pagesTwo-enter-content">遵义市博物馆于2006年11月20日成立是以文物和自然标本收藏、保护、研究、展示为主要职能，以发挥社会功能、转播有益于社会进步、思想道德、科学技术、文明知识为目的，向公众开放的非营利……</p>
             <a href="" class="pagesTwo-enter-more">查看详情</a>
         </div>
-        <div class="pagesTwo-enter" style="left: 640px">
+        <div class="pagesTwo-enter pagesTwo-sides-enter" style="left: 640px;top: 100px">
             <div class="pagesTwo-enter-title">
                 <h1>参观须知</h1>
                 <p>The Note Of Visiting</p>
@@ -97,7 +98,7 @@
 </div>
 <!--page 2-->
 <!--page 3-->
-<div class="pages pagesThree">
+<div class="pages pagesThree" style="top: 100%">
     <img src="images/home-pages3-bg.jpg" alt="" class="pages-bg"/>
     <div class="pagesThree-content">
         <div class="pagesThree-content-nav">
@@ -125,7 +126,557 @@
                 <span class="pagesThree-nav-line"></span>
             </ul>
         </div>
+        <div class="pagesThree-banner-container">
+            <div class="pagesThree-banner">
+                <div class="pagesThree-inner-banner-warp">
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">1-1保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">1-2保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">1-3保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">1-4保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagesThree-banner-btn">
+                    <span class="cur"></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="pagesThree-banner" style="display: none">
+                <div class="pagesThree-inner-banner-warp">
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">2-1保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">2-2保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">2-3保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">2-4保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagesThree-banner-btn">
+                    <span class="cur"></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="pagesThree-banner" style="display: none">
+                <div class="pagesThree-inner-banner-warp">
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">3-1保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">3-2保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">3-3保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">3-4保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagesThree-banner-btn">
+                    <span class="cur"></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="pagesThree-banner" style="display: none">
+                <div class="pagesThree-inner-banner-warp">
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">4-1保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">4-2保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">4-3保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                    <div class="pagesThree-inner-banner">
+                        <div class="pagesThree-banner-infor lf">
+                            <h1 class="pagesThree-banner-title">4-4保加利亚画家作品欣赏</h1>
+                            <span class="pagesThree-banner-span"></span>
+                            <div class="pagesThree-banner-details">
+                                <p>展览时间：2016/11/23</p>
+                                <p>展览展厅：北1-北4展厅</p>
+                            </div>
+                            <a href="" class="pagesThree-banner-more">查看详情</a>
+                        </div>
+                        <div class="pagesThree-banner-pic">
+                            <img src="images/home-pages3-banner-pic-1.jpg" alt="" width="240" height="350"/>
+                            <img src="images/home-pages3-banner-pic-2.jpg" width="240" height="350" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagesThree-banner-btn">
+                    <span class="cur"></span><span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+<!--page3 end-->
+<!--pages4 -->
+<div class="pages pagesFour" style="top: 100%">
+    <img src="images/home-pages4-bg.jpg" alt="" class="pages-bg"/>
+    <div class="pagesFour-main">
+        <div class="pagesFour-banner-container">
+            <div class="pagesFour-banner">
+                <a class="pagesFour-banner-pic" style="left: 0px" href=""><img src="images/pages4-banner-pic_03.jpg" width="224" height="424" alt=""/><p>1书画</p></a>
+                <a class="pagesFour-banner-pic" style="left: 255px;" href=""><img src="images/pages4-banner-pic_05.jpg" width="224" height="424" alt=""/><p>青铜</p></a>
+                <a class="pagesFour-banner-pic" style="left: 510px;" href=""><img src="images/pages4-banner-pic_07.jpg" width="224" height="424" alt=""/><p>陶瓷</p></a>
+                <a class="pagesFour-banner-pic" style="left: 765px;" href=""><img src="images/pages4-banner-pic_09.jpg" width="224" height="424" alt=""/><p>工艺品</p></a>
+            </div>
+            <div class="pagesFour-banner" style="left: 1020px">
+                <a class="pagesFour-banner-pic" style="left: 0px" href=""><img src="images/pages4-banner-pic_03.jpg" width="224" height="424" alt=""/><p>2书画</p></a>
+                <a class="pagesFour-banner-pic" style="left: 255px;" href=""><img src="images/pages4-banner-pic_05.jpg" width="224" height="424" alt=""/><p>青铜</p></a>
+                <a class="pagesFour-banner-pic" style="left: 510px;" href=""><img src="images/pages4-banner-pic_07.jpg" width="224" height="424" alt=""/><p>陶瓷</p></a>
+                <a class="pagesFour-banner-pic" style="left: 765px;" href=""><img src="images/pages4-banner-pic_09.jpg" width="224" height="424" alt=""/><p>工艺品</p></a>
+            </div>
+            <div class="pagesFour-banner" style="left: 1020px">
+                <a class="pagesFour-banner-pic" style="left: 0px" href=""><img src="images/pages4-banner-pic_03.jpg" width="224" height="424" alt=""/><p>3书画</p></a>
+                <a class="pagesFour-banner-pic" style="left: 255px;" href=""><img src="images/pages4-banner-pic_05.jpg" width="224" height="424" alt=""/><p>青铜</p></a>
+                <a class="pagesFour-banner-pic" style="left: 510px;" href=""><img src="images/pages4-banner-pic_07.jpg" width="224" height="424" alt=""/><p>陶瓷</p></a>
+                <a class="pagesFour-banner-pic" style="left: 765px;" href=""><img src="images/pages4-banner-pic_09.jpg" width="224" height="424" alt=""/><p>工艺品</p></a>
+            </div>
+            <div class="pagesFour-banner" style="left: 1020px">
+                <a class="pagesFour-banner-pic" style="left: 0px" href=""><img src="images/pages4-banner-pic_03.jpg" width="224" height="424" alt=""/><p>4书画</p></a>
+                <a class="pagesFour-banner-pic" style="left: 255px;" href=""><img src="images/pages4-banner-pic_05.jpg" width="224" height="424" alt=""/><p>青铜</p></a>
+                <a class="pagesFour-banner-pic" style="left: 510px;" href=""><img src="images/pages4-banner-pic_07.jpg" width="224" height="424" alt=""/><p>陶瓷</p></a>
+                <a class="pagesFour-banner-pic" style="left: 765px;" href=""><img src="images/pages4-banner-pic_09.jpg" width="224" height="424" alt=""/><p>工艺品</p></a>
+            </div>
+        </div>
+        <div class="pagesFour-banner-btn">
+            <span class="cur"></span><span></span><span></span><span></span>
+        </div>
+    </div>
+</div>
+<!--pages 4end-->
+<!--pages5-->
+<div class="pages pagesFive" style="top: 100%">
+    <img src="images/home-pages3-bg.jpg" alt="" class="pages-bg"/>
+    <div class="pagesFive-main">
+        <div class="pagesFive-main-logo lf">
+            <img class="pagesFive-main-pic" src="images/pages5-new-pic.jpg" width="300" height="440" alt=""/>
+            <div class="pagesFive-news-icon">
+
+            </div>
+        </div>
+        <div class="pagesFive-main-content rt">
+            <div class="pagesFive-news-nav">
+                <ul>
+                    <li class="cur"><a href="javascript:void(0)">通知公告</a></li>
+                    <li><a href="javascript:void(0)">遵博动态</a></li>
+                </ul>
+            </div>
+            <div class="pagesFive-news-container">
+                <div class="pagesFive-news-content">
+                    <div class="pagesFive-news-list">
+                        <div class="pagesFive-news">
+                            <div class="pagesFive-news-time lf">
+                                <h1>20</h1>
+                                <p>2016年11月</p>
+                            </div>
+                            <div class="pagesFive-news-detail rt">
+                                <h1><a href="">北京商报：中韩日绘画展再现东方画艺</a></h1>
+                                <span></span>
+                                <p>展览从三馆的藏品中分别精心挑选了中国明清时期，韩国朝鲜王朝时期以及日本室町、江户和明治时期的文人画、风俗画和佛教画作品共计52件（套），</p>
+                            </div>
+                        </div>
+                        <div class="pagesFive-news">
+                            <div class="pagesFive-news-time lf">
+                                <h1>20</h1>
+                                <p>2016年11月</p>
+                            </div>
+                            <div class="pagesFive-news-detail rt">
+                                <h1><a href="">北京商报：中韩日绘画展再现东方画艺</a></h1>
+                                <span></span>
+                                <p>展览从三馆的藏品中分别精心挑选了中国明清时期，韩国朝鲜王朝时期以及日本室町、江户和明治时期的文人画、风俗画和佛教画作品共计52件（套），</p>
+                            </div>
+                        </div>
+                        <div class="pagesFive-news">
+                            <div class="pagesFive-news-time lf">
+                                <h1>20</h1>
+                                <p>2016年11月</p>
+                            </div>
+                            <div class="pagesFive-news-detail rt">
+                                <h1><a href="">北京商报：中韩日绘画展再现东方画艺</a></h1>
+                                <span></span>
+                                <p>展览从三馆的藏品中分别精心挑选了中国明清时期，韩国朝鲜王朝时期以及日本室町、江户和明治时期的文人画、风俗画和佛教画作品共计52件（套），</p>
+                            </div>
+                        </div>
+                        <div class="pagesFive-news">
+                            <div class="pagesFive-news-time lf">
+                                <h1>20</h1>
+                                <p>2016年11月</p>
+                            </div>
+                            <div class="pagesFive-news-detail rt">
+                                <h1><a href="">北京商报：中韩日绘画展再现东方画艺</a></h1>
+                                <span></span>
+                                <p>展览从三馆的藏品中分别精心挑选了中国明清时期，韩国朝鲜王朝时期以及日本室町、江户和明治时期的文人画、风俗画和佛教画作品共计52件（套），</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" class="pagesTwo-enter-more">查看详情 <span></span></a>
+                </div>
+                <div class="pagesFive-news-content">
+                    <div class="pagesFive-news-list">
+                        <div class="pagesFive-news">
+                            <div class="pagesFive-news-time lf">
+                                <h1>20</h1>
+                                <p>2016年11月</p>
+                            </div>
+                            <div class="pagesFive-news-detail rt">
+                                <h1><a href="">2世界：中韩日绘画展再现东方画艺</a></h1>
+                                <span></span>
+                                <p>展览从三馆的藏品中分别精心挑选了中国明清时期，韩国朝鲜王朝时期以及日本室町、江户和明治时期的文人画、风俗画和佛教画作品共计52件（套），</p>
+                            </div>
+                        </div>
+                        <div class="pagesFive-news">
+                            <div class="pagesFive-news-time lf">
+                                <h1>20</h1>
+                                <p>2016年11月</p>
+                            </div>
+                            <div class="pagesFive-news-detail rt">
+                                <h1><a href="">北京商报：中韩日绘画展再现东方画艺</a></h1>
+                                <span></span>
+                                <p>展览从三馆的藏品中分别精心挑选了中国明清时期，韩国朝鲜王朝时期以及日本室町、江户和明治时期的文人画、风俗画和佛教画作品共计52件（套），</p>
+                            </div>
+                        </div>
+                        <div class="pagesFive-news">
+                            <div class="pagesFive-news-time lf">
+                                <h1>20</h1>
+                                <p>2016年11月</p>
+                            </div>
+                            <div class="pagesFive-news-detail rt">
+                                <h1><a href="">北京商报：中韩日绘画展再现东方画艺</a></h1>
+                                <span></span>
+                                <p>展览从三馆的藏品中分别精心挑选了中国明清时期，韩国朝鲜王朝时期以及日本室町、江户和明治时期的文人画、风俗画和佛教画作品共计52件（套），</p>
+                            </div>
+                        </div>
+                        <div class="pagesFive-news">
+                            <div class="pagesFive-news-time lf">
+                                <h1>20</h1>
+                                <p>2016年11月</p>
+                            </div>
+                            <div class="pagesFive-news-detail rt">
+                                <h1><a href="">北京商报：中韩日绘画展再现东方画艺</a></h1>
+                                <span></span>
+                                <p>展览从三馆的藏品中分别精心挑选了中国明清时期，韩国朝鲜王朝时期以及日本室町、江户和明治时期的文人画、风俗画和佛教画作品共计52件（套），</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" class="pagesTwo-enter-more">查看详情 <span></span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--pages5 end-->
+<div class="home-menu" style="display: none">
+    <ul>
+        <li class="nth-child" style="top: 0;left: 0">
+            <a href="" class="home-menu-label">
+                <div class="home-menu-label-bg">
+                    <span class="top"></span>
+                    <span class="right"></span>
+                    <span class="bottom"></span>
+                    <span class="left"></span>
+                </div>
+                <img src="images/home-menu-icon-1.png"  alt="" class="home-menu-icon"/>
+                <span class="home-menu-line"></span>
+                <h1 class="home-menu-Ename">HOME</h1>
+                <p class="home-menu-name"><span>首页</span></p>
+            </a>
+        </li>
+        <li style="top: 0;left: 25%">
+            <a href="" class="home-menu-label">
+                <div class="home-menu-label-bg">
+                    <span class="top"></span>
+                    <span class="right"></span>
+                    <span class="bottom"></span>
+                    <span class="left"></span>
+                </div>
+                <img src="images/home-menu-icon-2.png"  alt="" class="home-menu-icon"/>
+                <span class="home-menu-line"></span>
+                <h1 class="home-menu-Ename">introduce</h1>
+                <p class="home-menu-name"><span>概况</span></p>
+            </a>
+
+        </li>
+        <li style="top: 0;left: 50%" class="nth-child">
+            <a href="" class="home-menu-label">
+                <div class="home-menu-label-bg">
+                    <span class="top"></span>
+                    <span class="right"></span>
+                    <span class="bottom"></span>
+                    <span class="left"></span>
+                </div>
+                <img src="images/home-menu-icon-3.png"  alt="" class="home-menu-icon"/>
+                <span class="home-menu-line"></span>
+                <h1 class="home-menu-Ename">exhibit</h1>
+                <p class="home-menu-name"><span>展览</span></p>
+            </a>
+        </li>
+        <li style="top: 0;left: 75%">
+            <a href="" class="home-menu-label">
+                <div class="home-menu-label-bg">
+                    <span class="top"></span>
+                    <span class="right"></span>
+                    <span class="bottom"></span>
+                    <span class="left"></span>
+                </div>
+                <img src="images/home-menu-icon-4.png"  alt="" class="home-menu-icon"/>
+                <span class="home-menu-line"></span>
+                <h1 class="home-menu-Ename">Collection</h1>
+                <p class="home-menu-name"><span>藏品</span></p>
+            </a>
+        </li>
+        <li style="top: 50%;left: 0" >
+            <a href="" class="home-menu-label">
+                <div class="home-menu-label-bg">
+                    <span class="top"></span>
+                    <span class="right"></span>
+                    <span class="bottom"></span>
+                    <span class="left"></span>
+                </div>
+                <img src="images/home-menu-icon-5.png"  alt="" class="home-menu-icon"/>
+                <span class="home-menu-line"></span>
+                <h1 class="home-menu-Ename">education</h1>
+                <p class="home-menu-name"><span>教育</span></p>
+            </a>
+
+        </li>
+        <li style="top: 50%;left: 25%"class="nth-child">
+            <a href="" class="home-menu-label">
+                <div class="home-menu-label-bg">
+                    <span class="top"></span>
+                    <span class="right"></span>
+                    <span class="bottom"></span>
+                    <span class="left"></span>
+                </div>
+                <img src="images/home-menu-icon-6.png"  alt="" class="home-menu-icon"/>
+                <span class="home-menu-line"></span>
+                <h1 class="home-menu-Ename">service</h1>
+                <p class="home-menu-name"><span>服务</span></p>
+            </a>
+
+        </li>
+        <li style="top: 50%;left: 50%" >
+            <a href="" class="home-menu-label">
+                <div class="home-menu-label-bg">
+                    <span class="top"></span>
+                    <span class="right"></span>
+                    <span class="bottom"></span>
+                    <span class="left"></span>
+                </div>
+                <img src="images/home-menu-icon-7.png"  alt="" class="home-menu-icon"/>
+                <span class="home-menu-line"></span>
+                <h1 class="home-menu-Ename">STUDY</h1>
+                <p class="home-menu-name"><span>研究</span></p>
+            </a>
+
+        </li>
+        <li style="top: 50%;left: 75%" class="nth-child">
+            <a href="" class="home-menu-label">
+                <div class="home-menu-label-bg">
+                    <span class="top"></span>
+                    <span class="right"></span>
+                    <span class="bottom"></span>
+                    <span class="left"></span>
+                </div>
+                <img src="images/home-menu-icon-8.png"  alt="" class="home-menu-icon"/>
+                <span class="home-menu-line"></span>
+                <h1 class="home-menu-Ename">NEWS</h1>
+                <p class="home-menu-name"><span>资讯</span></p>
+            </a>
+
+        </li>
+    </ul>
 </div>
 <script src="js/main.js"></script>
 </body>
